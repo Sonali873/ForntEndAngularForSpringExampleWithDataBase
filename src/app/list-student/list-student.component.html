@@ -1,0 +1,28 @@
+<div class = "row">
+    <h2> Student List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for( dataForm of data ; track data){
+        <tr *ngIf="dataForm.id!=0">
+            <td> {{ dataForm.fname }} </td>
+            <td> {{ dataForm.lname }} </td>
+            <td> {{ dataForm.email}} </td>
+            <td>
+                <button (click) = "updateStudent(dataForm.id)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteStudent(dataForm.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "createStudent()" class = "btn btn-primary" style="margin-left: 10px"> Add Student</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

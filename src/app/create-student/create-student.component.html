@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+          <h3 class="text-center"> Create Student</h3>
+          <hr />
+          <div class="card-body">
+      <form [formGroup]="dataform" (ngSubmit)="submitData()">
+       <div class="main"><br>
+      <div class="input-fields">
+        <label> User id  </label>
+        <input name="id" formControlName="id" type="text" class="input-field" />
+      </div><br>
+      <div class="input-fields">
+        <label> First Name  </label>
+        <input name="firstName" formControlName="fname" type="text" class="input-field" />
+      </div><br>
+      <div class="input-fields">
+        <label> Last Name  </label>
+        <input name="lastName" formControlName="lname" type="text" class="input-field" />
+      </div><br>
+      <div class="input-fields">
+        <label> Email ID  </label>
+        <input name="emailId" formControlName="email" type="text" class="input-field" />
+      </div>
+      <button type="submit">Add Data</button>
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  
